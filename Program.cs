@@ -9,41 +9,17 @@ namespace Zoology
         {
             Console.WriteLine("Time for a little bit of Zoology!\n");
             List<Animal> animals = new List<Animal>();
-            animals.Add(new Animal("badger","Knutsen", 5));
-            animals.Add(new Animal("human","Ludvigsen", 92));
-            animals.Add(new Animal("killer whale","Willy", 1902));
-            animals.Add(new Animal());
+            animals.Add(new Dog("Snoop", 86));
+            animals.Add(new Cat("Garfield", 56));
+            animals.Add(new Bird("Trumpy", 120));
+            animals.Add(new Fox("Sneaky", 9.9));
 
             animals.ForEach(delegate(Animal animal)
             {
                 animal.describe();
+                animal.say();
+                Console.WriteLine();
             });
-        }
-    }
-
-    class Animal
-    {
-        string type;
-        string name;
-        double weight;
-
-        public Animal(string type, string name, double weight)
-        {
-            this.type = type;
-            this.name = name;
-            this.weight = weight;
-        }
-
-        public Animal()
-        {
-            type = "...what is this thing?";
-            name = "This thing doesn't even have a name, but";
-            weight = 100;
-        }
-        public void describe()
-        {
-            Console.WriteLine($"{name} is a {type}");
-            Console.WriteLine($"{name} is {(weight < 10 ? "a cute little rascal" : weight < 100 ? "neither tiny or huge" : "literally a beast")}.\n");
         }
     }
 }
