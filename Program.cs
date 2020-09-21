@@ -18,6 +18,7 @@ namespace Zoology
             {
                 animal.describe();
                 animal.say();
+                animal.move();
                 Console.WriteLine();
             });
         }
