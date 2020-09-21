@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Zoology
 {
-    class Fox : Animal
+    class Fox : Animal, IFlyer
     {
         public Fox(string name, double weight)
         {
@@ -16,6 +16,16 @@ namespace Zoology
         public override void say()
         {
             Console.WriteLine($"{name} goes Ring-ding-ding-ding-dingeringeding!\nGering - ding - ding - ding - dingeringeding!\nGering - ding - ding - ding - dingeringeding!");
+        }
+
+        public void fly()
+        {
+            Console.WriteLine($"{name} is confused. A fox can't fly!");
+        }
+
+        public override void move()
+        {
+            fly();
         }
     }
 }
