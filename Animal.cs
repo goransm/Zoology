@@ -29,5 +29,6 @@ namespace Zoology
             Console.WriteLine($"{name} is {(weight < 10 ? "a cute little rascal" : weight < 100 ? "neither tiny or huge" : "literally a beast")}.");
         }
         public abstract void say();
+        public abstract void move();
     }
 }
