@@ -6,11 +6,12 @@ namespace Zoology
 {
     class Bird : Animal, IFlyer
     {
-        public Bird(string name, double weight)
+        public Bird(string name, double weight, int age)
         {
             this.type = "Bird";
             this.name = name;
             this.weight = weight;
+            this.age = age;
         }
 
         public override void say()

@@ -6,11 +6,12 @@ namespace Zoology
 {
     class Dog : Animal, ISwimmer
     {
-        public Dog(string name, double weight)
+        public Dog(string name, double weight, int age)
         {
             this.type = "Dog";
             this.name = name;
             this.weight = weight;
+            this.age = age;
         }
 
         public override void say()

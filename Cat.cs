@@ -6,11 +6,12 @@ namespace Zoology
 {
     class Cat : Animal, IClimber
     {
-        public Cat(string name, double weight)
+        public Cat(string name, double weight, int age)
         {
             this.type = "Cat";
             this.name = name;
             this.weight = weight;
+            this.age = age;
         }
 
         public override void say()
